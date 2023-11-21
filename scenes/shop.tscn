@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://xldlauc2kn4l"]
+
+[ext_resource type="Texture2D" uid="uid://kvgjwy1by0pp" path="res://graphics/ui/dialog.png" id="1_51kqs"]
+
+[node name="Shop" type="Node2D"]
+
+[node name="Dialog" type="Sprite2D" parent="."]
+position = Vector2(205, 64)
+rotation = 1.5708
+scale = Vector2(0.5, 0.8)
+texture = ExtResource("1_51kqs")

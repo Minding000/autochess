@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://btmhv43m6cg1"]
+
+[ext_resource type="Texture2D" uid="uid://kvgjwy1by0pp" path="res://graphics/ui/dialog.png" id="1_3s2w5"]
+
+[node name="StatusBoard" type="Node2D"]
+
+[node name="Dialog" type="Sprite2D" parent="."]
+position = Vector2(79.5, 159)
+scale = Vector2(0.621094, 0.621094)
+texture = ExtResource("1_3s2w5")

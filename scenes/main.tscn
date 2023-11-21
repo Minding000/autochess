@@ -1,0 +1,132 @@
+[gd_scene load_steps=14 format=3 uid="uid://lkhbl2xhp2x4"]
+
+[ext_resource type="PackedScene" uid="uid://ccrjmdw5gyiy8" path="res://scenes/world.tscn" id="1_pma7r"]
+[ext_resource type="PackedScene" uid="uid://xldlauc2kn4l" path="res://scenes/shop.tscn" id="2_ipa82"]
+[ext_resource type="PackedScene" uid="uid://cw0joiir4cbv1" path="res://scenes/reserve.tscn" id="3_rj1on"]
+[ext_resource type="PackedScene" uid="uid://btmhv43m6cg1" path="res://scenes/status_board.tscn" id="4_jwd1b"]
+[ext_resource type="Texture2D" uid="uid://dgl21s1h3734f" path="res://graphics/pieces/blue-1.png" id="5_7r54w"]
+[ext_resource type="Texture2D" uid="uid://cpcw6qw7uyd4q" path="res://graphics/pieces/red-1.png" id="6_aild1"]
+[ext_resource type="Texture2D" uid="uid://b8kci7167la6o" path="res://graphics/pieces/yellow-1.png" id="7_7qwab"]
+[ext_resource type="Texture2D" uid="uid://bqoybw5xey62i" path="res://graphics/pieces/green-1.png" id="8_etswi"]
+[ext_resource type="Texture2D" uid="uid://b30eqg5ytoqtx" path="res://graphics/pieces/red-2.png" id="9_wabla"]
+[ext_resource type="Texture2D" uid="uid://cxh0gh4dok0hx" path="res://graphics/pieces/blue.png" id="10_quejy"]
+[ext_resource type="Texture2D" uid="uid://dmdprde2cma3n" path="res://graphics/pieces/green.png" id="11_jlaew"]
+[ext_resource type="Texture2D" uid="uid://bsxrbrhx30qql" path="res://graphics/pieces/yellow.png" id="12_0oux0"]
+[ext_resource type="LabelSettings" uid="uid://byx3mgvik4atb" path="res://label-settings/status-board.tres" id="13_qn4c6"]
+
+[node name="Main" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("1_pma7r")]
+position = Vector2(147, 102)
+scale = Vector2(0.5, 0.5)
+
+[node name="Shop" parent="." instance=ExtResource("2_ipa82")]
+position = Vector2(263, 35)
+
+[node name="Reserve" parent="." instance=ExtResource("3_rj1on")]
+position = Vector2(212, 720)
+
+[node name="StatusBoard" parent="." instance=ExtResource("4_jwd1b")]
+position = Vector2(749, 166)
+
+[node name="Demo" type="Node2D" parent="."]
+position = Vector2(147, 102)
+
+[node name="BoardPieces" type="Node2D" parent="Demo"]
+
+[node name="Blue-1" type="Sprite2D" parent="Demo/BoardPieces"]
+position = Vector2(290, 417)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_7r54w")
+
+[node name="Red-1" type="Sprite2D" parent="Demo/BoardPieces"]
+position = Vector2(353, 352)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_aild1")
+
+[node name="Yellow-1" type="Sprite2D" parent="Demo/BoardPieces"]
+position = Vector2(352, 417)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_7qwab")
+
+[node name="Green-2" type="Sprite2D" parent="Demo/BoardPieces"]
+position = Vector2(224, 416)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_etswi")
+
+[node name="Red-2" type="Sprite2D" parent="Demo/BoardPieces"]
+position = Vector2(289, 351)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_wabla")
+
+[node name="ShopPieces" type="Node2D" parent="Demo"]
+
+[node name="Blue" type="Sprite2D" parent="Demo/ShopPieces"]
+position = Vector2(178, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_quejy")
+
+[node name="Green" type="Sprite2D" parent="Demo/ShopPieces"]
+position = Vector2(251, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("11_jlaew")
+
+[node name="Yellow" type="Sprite2D" parent="Demo/ShopPieces"]
+position = Vector2(322, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("12_0oux0")
+
+[node name="Yellow2" type="Sprite2D" parent="Demo/ShopPieces"]
+position = Vector2(395, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("12_0oux0")
+
+[node name="Blue2" type="Sprite2D" parent="Demo/ShopPieces"]
+position = Vector2(469, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_quejy")
+
+[node name="ReservePieces" type="Node2D" parent="Demo"]
+
+[node name="Green-1" type="Sprite2D" parent="Demo/ReservePieces"]
+position = Vector2(98, 650)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_etswi")
+
+[node name="StatusBoard" type="Node2D" parent="Demo"]
+
+[node name="Label" type="Label" parent="Demo/StatusBoard"]
+offset_left = 629.0
+offset_top = 96.0
+offset_right = 707.0
+offset_bottom = 122.0
+text = "Round: 10"
+label_settings = ExtResource("13_qn4c6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Demo/StatusBoard"]
+offset_left = 629.0
+offset_top = 120.0
+offset_right = 678.0
+offset_bottom = 146.0
+text = "HP: 72"
+label_settings = ExtResource("13_qn4c6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Demo/StatusBoard"]
+offset_left = 630.0
+offset_top = 144.0
+offset_right = 736.0
+offset_bottom = 170.0
+text = "Level: 6 (5/14)"
+label_settings = ExtResource("13_qn4c6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Demo/StatusBoard"]
+offset_left = 630.0
+offset_top = 168.0
+offset_right = 726.0
+offset_bottom = 194.0
+text = "Gold: 37 (+3)"
+label_settings = ExtResource("13_qn4c6")
+metadata/_edit_use_anchors_ = true

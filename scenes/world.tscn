@@ -1,69 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccrjmdw5gyiy8"]
+[gd_scene load_steps=3 format=3 uid="uid://ccrjmdw5gyiy8"]
 
 [ext_resource type="Texture2D" uid="uid://crqxgs2m5eopu" path="res://graphics/board/background.png" id="1_pxvle"]
-[ext_resource type="Texture2D" uid="uid://b4w7o7hev1sd5" path="res://graphics/board/tile-tileset.png" id="2_e2qch"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gdejj"]
-resource_name = "Tiles"
-texture = ExtResource("2_e2qch")
-texture_region_size = Vector2i(64, 64)
-0:0/next_alternative_id = 8
-0:0/0 = 0
-0:0/1 = 1
-0:0/1/flip_h = true
-0:0/2 = 2
-0:0/2/flip_v = true
-0:0/3 = 3
-0:0/3/flip_h = true
-0:0/3/flip_v = true
-0:0/4 = 4
-0:0/4/transpose = true
-0:0/5 = 5
-0:0/5/flip_h = true
-0:0/5/transpose = true
-0:0/6 = 6
-0:0/6/flip_v = true
-0:0/6/transpose = true
-0:0/7 = 7
-0:0/7/flip_h = true
-0:0/7/flip_v = true
-0:0/7/transpose = true
-1:0/next_alternative_id = 13
-1:0/0 = 0
-1:0/1 = 1
-1:0/1/flip_h = true
-1:0/7 = 7
-1:0/7/flip_v = true
-1:0/8 = 8
-1:0/8/flip_h = true
-1:0/8/flip_v = true
-1:0/9 = 9
-1:0/9/transpose = true
-1:0/10 = 10
-1:0/10/flip_h = true
-1:0/10/transpose = true
-1:0/11 = 11
-1:0/11/flip_v = true
-1:0/11/transpose = true
-1:0/12 = 12
-1:0/12/flip_h = true
-1:0/12/flip_v = true
-1:0/12/transpose = true
-
-[sub_resource type="TileSet" id="TileSet_3efua"]
-tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_gdejj")
+[ext_resource type="TileSet" uid="uid://cmludovhigmx8" path="res://tile-sets/tiles.tres" id="2_yk87i"]
 
 [node name="World" type="Node2D"]
 
-[node name="Map" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(641, 644)
 scale = Vector2(1.25195, 1.25195)
 texture = ExtResource("1_pxvle")
 
-[node name="Board" type="TileMap" parent="."]
+[node name="Tiles" type="TileMap" parent="."]
 scale = Vector2(2, 2)
-tile_set = SubResource("TileSet_3efua")
+tile_set = ExtResource("2_yk87i")
 format = 2
 layer_0/name = "Main"
 layer_0/tile_data = PackedInt32Array(262148, 0, 65536, 458759, 0, 65536, 262150, 0, 0, 393218, 0, 0, 458757, 0, 131072, 262146, 0, 131072, 65543, 0, 196608, 131076, 0, 196608, 524290, 0, 262144, 327683, 0, 262144, 524292, 0, 327680, 65541, 0, 327680, 393222, 0, 393216, 196609, 0, 393216, 327685, 0, 458752, 196615, 0, 458752, 327687, 0, 0, 458755, 0, 0, 458753, 0, 65536, 131078, 0, 65536, 327681, 0, 131072, 393220, 0, 131072, 196613, 0, 196608, 65539, 0, 196608, 196611, 0, 262144, 131080, 0, 262144, 393224, 0, 327680, 262152, 0, 327680, 524296, 0, 393216, 131074, 0, 393216, 524294, 0, 458752, 65537, 0, 458752, 327684, 65536, 0, 196614, 65536, 0, 393219, 65536, 65536, 131075, 65536, 65536, 65538, 65536, 458752, 393221, 65536, 458752, 524293, 65536, 524288, 327688, 65536, 524288, 458760, 65536, 589824, 262145, 65536, 589824, 131079, 65536, 655360, 65540, 65536, 655360, 458756, 65536, 720896, 196616, 65536, 720896, 524295, 65536, 786432, 262147, 65536, 786432, 458754, 65536, 0, 327686, 65536, 0, 524291, 65536, 65536, 393217, 65536, 65536, 524289, 65536, 458752, 393223, 65536, 458752, 458758, 65536, 524288, 327682, 65536, 524288, 196610, 65536, 589824, 262151, 65536, 589824, 262149, 65536, 655360, 65542, 65536, 655360, 131077, 65536, 720896, 131073, 65536, 720896, 196612, 65536, 786432, 65544, 65536, 786432)

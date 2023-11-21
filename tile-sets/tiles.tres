@@ -1,0 +1,54 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cmludovhigmx8"]
+
+[ext_resource type="Texture2D" uid="uid://b4w7o7hev1sd5" path="res://graphics/board/tile-tileset.png" id="1_i13hq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gdejj"]
+resource_name = "Tiles"
+texture = ExtResource("1_i13hq")
+texture_region_size = Vector2i(64, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+1:0/next_alternative_id = 13
+1:0/0 = 0
+1:0/1 = 1
+1:0/1/flip_h = true
+1:0/7 = 7
+1:0/7/flip_v = true
+1:0/8 = 8
+1:0/8/flip_h = true
+1:0/8/flip_v = true
+1:0/9 = 9
+1:0/9/transpose = true
+1:0/10 = 10
+1:0/10/flip_h = true
+1:0/10/transpose = true
+1:0/11 = 11
+1:0/11/flip_v = true
+1:0/11/transpose = true
+1:0/12 = 12
+1:0/12/flip_h = true
+1:0/12/flip_v = true
+1:0/12/transpose = true
+
+[resource]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_gdejj")
