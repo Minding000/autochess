@@ -9,10 +9,12 @@ const piece_scenes = [blue_piece, green_piece, red_piece, yellow_piece]
 
 const piece_scale = 0.8
 
-func _on_ready():
+const reroll_cost = 2
+
+func _on_ready() -> void:
 	reroll()
 
-func reroll():
+func reroll() -> void:
 	clear_pieces()
 	for slot_index in range(0, 5):
 		var slot_marker = $PiecePositions.get_child(slot_index)
@@ -24,12 +26,14 @@ func reroll():
 		piece_instance.scale.y = piece_scale
 		$Pieces.add_child(piece_instance)
 
-func clear_pieces():
+func clear_pieces() -> void:
 	for piece in $Pieces.get_children():
 		piece.queue_free()
 
 func get_random_piece_scene() -> PackedScene:
 	return piece_scenes.pick_random()
 
-func _on_reroll_button_pressed():
-	reroll()
+func _on_reroll_button_pressed() -> void:
+	if $"..".player.gold >= reroll_cost:
+		$"..".reduce_player_gold_by(reroll_cost)
+		reroll()
