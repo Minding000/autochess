@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccrjmdw5gyiy8"]
+[gd_scene load_steps=4 format=3 uid="uid://ccrjmdw5gyiy8"]
 
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_f2ojx"]
 [ext_resource type="Texture2D" uid="uid://crqxgs2m5eopu" path="res://graphics/board/background.png" id="1_pxvle"]
 [ext_resource type="TileSet" uid="uid://cmludovhigmx8" path="res://tile-sets/tiles.tres" id="2_yk87i"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_f2ojx")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(641, 644)
